@@ -15,5 +15,6 @@ Start off by selecting which algorithm to see from the drop down (currently, onl
 For sorting algorithms, select the initial array size to be sorted (size is limited to be between 1 and 20). Click the 'Generate' button to see the intial array that was created. Click the 'Start' button to see the algorithm in action!
 
 
-#### [Try it here](https://algodex.herokuapp.com/)
-#### [GitHub Repo](https://github.com/wyao905/algodex.git)
+[Try it here](https://algodex.herokuapp.com/)
+
+[GitHub Repo](https://github.com/wyao905/algodex.git)
