@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "Algodex"
+categories: project algodex
+---
+
+### Project
+Algodex is a frontend single page application built using React. The goal of the application is to provide a visualization of what goes on during the runtime of an algorithm.
+
+The project started of as a way to keep track of the different algorithms I have come across. It also provides an excellent opportunity to experiment and play around with more complex component and state interactions. So far, the only algorithm that has been added is Quick Sort. I'm currently looking to implement additional algorithms such as Merge Sort and A* in the near future.
+
+#### [Try it here](https://algodex.herokuapp.com/)
+
+### Instructions
+Start off by selecting which algorithm to see from the drop down (currently only quick sort is implemented).
+
+For sorting algorithms, select the initial array size to be sorted (size is limited to be between 1 and 20). Click the 'Generate' button to see the intial array that was created. Click the 'Start' button to see the algorithm in action!
