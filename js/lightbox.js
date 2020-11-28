@@ -2,11 +2,13 @@ function is_youtubelink(url) {
     var p = /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
     return (url.match(p)) ? RegExp.$1 : false;
 }
+
 function is_imagelink(url) {
     var p = /([a-z\-_0-9\/\:\.]*\.(jpg|jpeg|png|gif))/i;
     return (url.match(p)) ? true : false;
 }
-function is_vimeolink(url,el) {
+
+function is_vimeolink(url, el) {
     var id = false;
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
@@ -14,10 +16,9 @@ function is_vimeolink(url,el) {
             if (xmlhttp.status == 200) {
                 var response = JSON.parse(xmlhttp.responseText);
                 id = response.video_id;
-                console.log(id);
+                // console.log(id);
                 el.classList.add('lightbox-vimeo');
-                el.setAttribute('data-id',id);
-
+                el.setAttribute('data-id', id);
                 el.addEventListener("click", function(event) {
                     event.preventDefault();
                     document.getElementById('lightbox').innerHTML = '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://player.vimeo.com/video/'+el.getAttribute('data-id')+'/?autoplay=1&byline=0&title=0&portrait=0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>';
@@ -37,6 +38,7 @@ function is_vimeolink(url,el) {
     xmlhttp.open("GET", 'https://vimeo.com/api/oembed.json?url='+url, true);
     xmlhttp.send();
 }
+
 function setGallery(el) {
     var elements = document.body.querySelectorAll(".gallery");
     elements.forEach(element => {
